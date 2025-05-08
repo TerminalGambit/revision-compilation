@@ -64,8 +64,7 @@ void print_unmatched_users() {
 used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
 back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
 
-.|
-\n    ; // ignorer les autres lignes
+.|\\n    ; /* ignorer les autres lignes */
 
 %%
 
