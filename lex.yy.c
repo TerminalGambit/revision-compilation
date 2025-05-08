@@ -360,12 +360,10 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[33] =
+static const flex_int16_t yy_accept[17] =
     {   0,
         0,    0,    5,    3,    4,    3,    3,    3,    3,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    1,    0,
-        2,    0
+        0,    0,    0,    2,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -373,17 +371,17 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    3,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    4,    4,    1,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    1,    1,    1,
-        1,    1,    1,    5,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        1,    6,    1,    1,    4,    1,    7,    8,    9,   10,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    3,    1,    1,    1,    1,    4,    5,    6,    7,
 
-       11,   12,    4,    4,    4,    4,   13,    4,   14,   15,
-       16,    4,    4,   17,   18,    4,   19,    4,    4,    4,
-       20,    4,    1,    1,    1,    1,    1,    1,    1,    1,
+        8,    1,    1,    1,    1,    1,    9,    1,    1,   10,
+        1,    1,    1,    1,   11,    1,   12,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -400,46 +398,38 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[21] =
+static const YY_CHAR yy_meta[13] =
     {   0,
-        1,    1,    1,    2,    1,    1,    2,    2,    2,    2,
-        2,    2,    2,    2,    2,    2,    2,    2,    2,    2
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1
     } ;
 
-static const flex_int16_t yy_base[38] =
+static const flex_int16_t yy_base[18] =
     {   0,
-        0,   18,   36,   40,   40,   20,   27,   15,   40,   23,
-       20,   17,   19,   25,   24,   13,   15,    5,    1,    0,
-       12,    0,    0,    8,    5,    0,    0,    4,    0,    0,
-        0,   40,   37,    5,    3,    2,    1
+        0,   11,   19,   24,   24,    8,   13,    4,   24,    5,
+        2,    0,    0,   24,   24,   24,    0
     } ;
 
-static const flex_int16_t yy_def[38] =
+static const flex_int16_t yy_def[18] =
     {   0,
-       33,   33,   32,   32,   32,   32,   32,   32,   32,   32,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32,
-       32,   32,   34,   32,   34,   35,   36,   35,   36,   37,
-       37,    0,   32,   32,   32,   32,   32
+       17,   17,   16,   16,   16,   16,   16,   16,   16,   16,
+       16,   16,   16,   16,   16,    0,   16
     } ;
 
-static const flex_int16_t yy_nxt[61] =
+static const flex_int16_t yy_nxt[37] =
     {   0,
-       32,    5,   31,   29,   28,    6,   25,    7,   30,   27,
-       26,   32,   32,   24,   23,   22,   32,   32,    8,    5,
-       21,   20,   19,    6,   18,    7,   17,   16,   15,   14,
-       13,   12,   11,   10,    9,   32,    8,    4,    4,    3,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32
+        4,    5,    6,   16,    7,   16,   15,   16,   14,   13,
+       12,    8,    5,    6,   11,    7,   10,    9,   16,   16,
+       16,   16,    8,    3,   16,   16,   16,   16,   16,   16,
+       16,   16,   16,   16,   16,   16
     } ;
 
-static const flex_int16_t yy_chk[61] =
+static const flex_int16_t yy_chk[37] =
     {   0,
-        0,    1,   37,   36,   35,    1,   34,    1,   28,   25,
-       24,    0,    0,   22,   21,   20,    0,    0,    1,    2,
-       19,   18,   17,    2,   16,    2,   15,   14,   13,   12,
-       11,   10,    8,    7,    6,    3,    2,   33,   33,   32,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32,
-       32,   32,   32,   32,   32,   32,   32,   32,   32,   32
+       17,    1,    1,    0,    1,    0,   13,    0,   12,   11,
+       10,    1,    2,    2,    8,    2,    7,    6,    3,    0,
+        0,    0,    2,   16,   16,   16,   16,   16,   16,   16,
+       16,   16,   16,   16,   16,   16
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -456,55 +446,67 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "question_1_2.l"
-/* question_1_2.l - Trouver l'utilisateur qui fait un usage intensif de CPLEX */
-#line 4 "question_1_2.l"
+#line 1 "question_1_3.l"
+/* question_1_3.l - Trouver les utilisateurs n'ayant pas restitué tous les jetons */
+#line 4 "question_1_3.l"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 #define MAX_USERS 1000
 
-// Structures pour stocker les statistiques
 typedef struct {
     char* login;
-    int count;
+    int obtentions;
+    int restitutions;
 } UserStats;
 
 UserStats users[MAX_USERS];
 int user_count = 0;
 
-// Recherche un utilisateur existant ou l'ajoute
-void increment_usage(const char* login) {
+void increment_obtention(const char* login) {
     for (int i = 0; i < user_count; ++i) {
         if (strcmp(users[i].login, login) == 0) {
-            users[i].count++;
+            users[i].obtentions++;
             return;
         }
     }
     if (user_count < MAX_USERS) {
         users[user_count].login = strdup(login);
-        users[user_count].count = 1;
+        users[user_count].obtentions = 1;
+        users[user_count].restitutions = 0;
         user_count++;
     }
 }
 
-// Trouver l'utilisateur le plus actif
-void print_most_active_user() {
-    int max = 0;
-    char* best = NULL;
+void increment_restitution(const char* login) {
     for (int i = 0; i < user_count; ++i) {
-        if (users[i].count > max) {
-            max = users[i].count;
-            best = users[i].login;
+        if (strcmp(users[i].login, login) == 0) {
+            users[i].restitutions++;
+            return;
         }
     }
-    if (best) {
-        printf("Utilisateur le plus actif : %s (%d utilisations)\n", best, max);
+    if (user_count < MAX_USERS) {
+        users[user_count].login = strdup(login);
+        users[user_count].obtention = 0;
+        users[user_count].restitutions = 1;
+        user_count++;
     }
 }
-#line 507 "lex.yy.c"
-#line 508 "lex.yy.c"
+
+void print_unmatched_users() {
+    printf("Utilisateurs n'ayant pas restitué tous leurs jetons :\n");
+    for (int i = 0; i < user_count; ++i) {
+        if (users[i].obtentions > users[i].restitutions) {
+            printf("%s : obtentions = %d, restitutions = %d\n",
+                   users[i].login,
+                   users[i].obtentions,
+                   users[i].restitutions);
+        }
+    }
+}
+#line 509 "lex.yy.c"
+#line 510 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -721,10 +723,10 @@ YY_DECL
 		}
 
 	{
-#line 50 "question_1_2.l"
+#line 62 "question_1_3.l"
 
 
-#line 728 "lex.yy.c"
+#line 730 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -751,13 +753,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 33 )
+				if ( yy_current_state >= 17 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 40 );
+		while ( yy_base[yy_current_state] != 24 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -783,25 +785,25 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 52 "question_1_2.l"
-{ increment_usage(yytext + 8); }
+#line 64 "question_1_3.l"
+by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 53 "question_1_2.l"
-{ increment_usage(yytext + 10); }
+#line 65 "question_1_3.l"
+from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 55 "question_1_2.l"
+#line 67 "question_1_3.l"
 ; /* ignorer les autres lignes */
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 57 "question_1_2.l"
+#line 69 "question_1_3.l"
 ECHO;
 	YY_BREAK
-#line 805 "lex.yy.c"
+#line 807 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1098,7 +1100,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 33 )
+			if ( yy_current_state >= 17 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1126,11 +1128,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 33 )
+		if ( yy_current_state >= 17 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 32);
+	yy_is_jam = (yy_current_state == 16);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1806,12 +1808,12 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 57 "question_1_2.l"
+#line 69 "question_1_3.l"
 
 
 int main(int argc, char** argv) {
     yylex();
-    print_most_active_user();
+    print_unmatched_users();
     return 0;
 }
 

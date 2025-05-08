@@ -1,0 +1,54 @@
+jackmassey@raspberrypi:~/Desktop/revision-compilation $ gcc lex.yy.c -o analyse_erreur
+question_1_3.l: In function ‘increment_restitution’:
+question_1_3.l:43:27: error: ‘UserStats’ has no member named ‘obtention’; did you mean ‘obtentions’?
+   43 |         users[user_count].obtention = 0;
+      |                           ^~~~~~~~~
+      |                           obtentions
+question_1_3.l: In function ‘yylex’:
+question_1_3.l:64:1: warning: implicit declaration of function ‘by’ [-Wimplicit-function-declaration]
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      | ^~
+question_1_3.l:64:5: error: expected expression before ‘[’ token
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |     ^
+question_1_3.l:64:6: error: ‘a’ undeclared (first use in this function)
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |      ^
+question_1_3.l:64:6: note: each undeclared identifier is reported only once for each function it appears in
+question_1_3.l:64:14: error: invalid suffix "_" on floating constant
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |              ^~~
+question_1_3.l:64:20: error: expected expression before ‘)’ token
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |                    ^
+question_1_3.l:64:21: error: stray ‘@’ in program
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |                     ^
+question_1_3.l:64:32: error: invalid suffix "_" on floating constant
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |                                ^~~
+question_1_3.l:64:38: error: expected expression before ‘)’ token
+   64 | used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+      |                                      ^
+question_1_3.l:65:1: warning: implicit declaration of function ‘from’ [-Wimplicit-function-declaration]
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      | ^~~~
+question_1_3.l:65:7: error: expected expression before ‘[’ token
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |       ^
+question_1_3.l:65:16: error: invalid suffix "_" on floating constant
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |                ^~~
+question_1_3.l:65:22: error: expected expression before ‘)’ token
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |                      ^
+question_1_3.l:65:23: error: stray ‘@’ in program
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |                       ^
+question_1_3.l:65:34: error: invalid suffix "_" on floating constant
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |                                  ^~~
+question_1_3.l:65:40: error: expected expression before ‘)’ token
+   65 | back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+      |                                        ^
+jackmassey@raspberrypi:~/Desktop/revision-compilation $ 
