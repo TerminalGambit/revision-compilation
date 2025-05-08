@@ -1,0 +1,6 @@
+Jan 20 10:00:00 UTC A --> CPLEX <linux> v10.010 used by alice@venus, usage=ILOCPX123A
+Jan 20 10:05:00 UTC B <-- CPLEX <linux> v10.010 back from alice@venus, usage=ILOCPX123A
+Jan 20 10:10:00 UTC C --> CPLEX <linux> v10.010 used by bob@mars, usage=ILOCPX123B
+Jan 20 10:15:00 UTC D --> CPLEX <linux> v10.010 used by charlie@jupiter, usage=ILOCPX123C
+Jan 20 10:20:00 UTC E <-- CPLEX <linux> v10.010 back from charlie@jupiter, usage=ILOCPX123C
+Jan 20 10:25:00 UTC F --> CPLEX <linux> v10.010 used by diana@saturn, usage=ILOCPX123D
