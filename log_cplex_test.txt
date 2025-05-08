@@ -1,0 +1,13 @@
+Jan 19 13:10:02 UTC 2 --> CPLEX <linux> v10.010 used by touati@luce, usage=ILOCPX501B
+Jan 19 13:10:04 UTC V <-- CPLEX <linux> v10.010 back from touati@luce, usage=ILOCPX501B
+Jan 19 15:26:00 UTC b --> CPLEX <linux> v10.110 used by loch@pascal, usage=ILOCPX3BBE
+Jan 19 15:26:02 UTC y <-- CPLEX <linux> v10.110 back from loch@pascal, usage=ILOCPX3BBE
+Jan 19 15:26:08 UTC l --> CPLEX <linux> v10.110 used by loch@stendhal, usage=ILOCPX12A4
+Jan 19 15:26:09 UTC V <-- CPLEX <linux> v10.110 back from loch@stendhal, usage=ILOCPX12A4
+Jan 19 15:26:09 UTC t --> CPLEX <linux> v10.110 used by loch@stendhal, usage=ILOCPX12A5
+Jan 19 15:26:11 UTC n <-- CPLEX <linux> v10.110 back from loch@stendhal, usage=ILOCPX12A5
+Jan 19 15:26:11 UTC U --> CPLEX <linux> v10.110 used by loch@stendhal, usage=ILOCPX12A6
+Jan 19 15:26:21 UTC m <-- CPLEX <linux> v10.110 back from loch@stendhal, usage=ILOCPX12A6
+Jan 19 15:26:21 UTC U --> CPLEX <linux> v10.110 used by loch@stendhal, usage=ILOCPX12A7
+Jan 19 15:26:27 UTC o <-- CPLEX <linux> v10.110 back from loch@stendhal, usage=ILOCPX12A7
+Jan 19 15:26:27 UTC f --> CPLEX <linux> v10.110 used by loch@stendhal, usage=ILOCPX12A8
