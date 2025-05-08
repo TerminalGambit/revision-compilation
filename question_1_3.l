@@ -40,7 +40,7 @@ void increment_restitution(const char* login) {
     }
     if (user_count < MAX_USERS) {
         users[user_count].login = strdup(login);
-        users[user_count].obtention = 0;
+        users[user_count].obtentions = 0;
         users[user_count].restitutions = 1;
         user_count++;
     }
@@ -61,8 +61,8 @@ void print_unmatched_users() {
 
 %%
 
-used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
-back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
+"used by "([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_obtention(yytext + 8); }
+"back from "([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_restitution(yytext + 10); }
 
 .|\\n    ; /* ignorer les autres lignes */
 
