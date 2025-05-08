@@ -49,8 +49,8 @@ void print_most_active_user() {
 
 %%
 
-used by ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_usage(yytext + 8); }
-back from ([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_usage(yytext + 10); }
+"used by "([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)       { increment_usage(yytext + 8); }
+"back from "([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)    { increment_usage(yytext + 10); }
 
 .|\\n    ; /* ignorer les autres lignes */
 
