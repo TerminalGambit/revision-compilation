@@ -22,7 +22,6 @@ ID      [a-zA-Z_][a-zA-Z0-9_]*
 \(              { return '('; }
 \)              { return ')'; }
 {ID}            { yylval.strval = strdup(yytext); return variable; }
-"quit"          { printf("Au revoir!\n"); exit(0); }
 [ \t\n]+        { /* ignorer les espaces */ }
 .               { printf("Caractère inconnu : %s\n", yytext); }
 

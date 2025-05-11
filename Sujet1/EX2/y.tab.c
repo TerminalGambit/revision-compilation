@@ -20,7 +20,7 @@
 
 #define YYPURE 0
 
-#line 4 "analyse_types_expression.y"
+#line 2 "analyse_avec_warning.y"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -44,7 +44,7 @@ int yylex();
 #endif
 #ifndef YYSTYPE_IS_DECLARED
 #define YYSTYPE_IS_DECLARED 1
-#line 23 "analyse_types_expression.y"
+#line 21 "analyse_avec_warning.y"
 typedef union YYSTYPE {
     int intval;
     float floatval;
@@ -372,7 +372,7 @@ static YYINT  *yylexp = 0;
 
 static YYINT  *yylexemes = 0;
 #endif /* YYBTYACC */
-#line 92 "analyse_types_expression.y"
+#line 102 "analyse_avec_warning.y"
 
 int main() {
     printf("Saisir une expression :\n");
@@ -1050,89 +1050,101 @@ yyreduce:
     switch (yyn)
     {
 case 1:
-#line 40 "analyse_types_expression.y"
+#line 38 "analyse_avec_warning.y"
 	{
         if (yystack.l_mark[-1].typeexpr == MODULO) {
-            if (yystack.l_mark[-2].typeexpr == entier && yystack.l_mark[0].typeexpr == entier) yyval.typeexpr = entier;
-            else yyval.typeexpr = erreurtype;
+            if (yystack.l_mark[-2].typeexpr != entier) {
+                printf("Warning: conversion de type en entier pour l'opérande gauche du modulo.\n");
+            }
+            if (yystack.l_mark[0].typeexpr != entier) {
+                printf("Warning: conversion de type en entier pour l'opérande droite du modulo.\n");
+            }
+            yyval.typeexpr = entier;
         } else if (yystack.l_mark[-2].typeexpr == pointeur || yystack.l_mark[0].typeexpr == pointeur) {
             if (yystack.l_mark[-1].typeexpr == ADDITION || yystack.l_mark[-1].typeexpr == SOUSTRACTION) {
-                if ((yystack.l_mark[-2].typeexpr == pointeur && yystack.l_mark[0].typeexpr == entier) || (yystack.l_mark[-2].typeexpr == entier && yystack.l_mark[0].typeexpr == pointeur))
+                if ((yystack.l_mark[-2].typeexpr == pointeur && yystack.l_mark[0].typeexpr == entier) || (yystack.l_mark[-2].typeexpr == entier && yystack.l_mark[0].typeexpr == pointeur)) {
                     yyval.typeexpr = pointeur;
-                else
+                } else {
                     yyval.typeexpr = erreurtype;
+                }
             } else {
                 yyval.typeexpr = erreurtype;
             }
         } else if (yystack.l_mark[-2].typeexpr == flottant || yystack.l_mark[0].typeexpr == flottant) {
-            if ((yystack.l_mark[-2].typeexpr == entier || yystack.l_mark[-2].typeexpr == flottant) && (yystack.l_mark[0].typeexpr == entier || yystack.l_mark[0].typeexpr == flottant))
+            if ((yystack.l_mark[-2].typeexpr == entier || yystack.l_mark[-2].typeexpr == flottant) && (yystack.l_mark[0].typeexpr == entier || yystack.l_mark[0].typeexpr == flottant)) {
+                if (yystack.l_mark[-2].typeexpr == flottant && yystack.l_mark[0].typeexpr == entier) {
+                    printf("Warning: conversion implicite de l'entier en flottant pour l'opérande droite.\n");
+                } else if (yystack.l_mark[-2].typeexpr == entier && yystack.l_mark[0].typeexpr == flottant) {
+                    printf("Warning: conversion implicite de l'entier en flottant pour l'opérande gauche.\n");
+                }
                 yyval.typeexpr = flottant;
-            else
+            } else {
                 yyval.typeexpr = erreurtype;
+            }
         } else if (yystack.l_mark[-2].typeexpr == entier && yystack.l_mark[0].typeexpr == entier) {
             yyval.typeexpr = entier;
         } else {
             yyval.typeexpr = erreurtype;
         }
     }
-#line 1079 "y.tab.c"
+#line 1091 "y.tab.c"
 break;
 case 2:
-#line 64 "analyse_types_expression.y"
+#line 74 "analyse_avec_warning.y"
 	{
         yyval.typeexpr = yystack.l_mark[0].typeexpr;
     }
-#line 1086 "y.tab.c"
+#line 1098 "y.tab.c"
 break;
 case 3:
-#line 70 "analyse_types_expression.y"
+#line 80 "analyse_avec_warning.y"
 	{
         yyval.typeexpr = yystack.l_mark[-1].typeexpr;
     }
-#line 1093 "y.tab.c"
+#line 1105 "y.tab.c"
 break;
 case 4:
-#line 73 "analyse_types_expression.y"
+#line 83 "analyse_avec_warning.y"
 	{
         yyval.typeexpr = entier;
     }
-#line 1100 "y.tab.c"
+#line 1112 "y.tab.c"
 break;
 case 5:
-#line 76 "analyse_types_expression.y"
+#line 86 "analyse_avec_warning.y"
 	{
         yyval.typeexpr = flottant;
     }
-#line 1107 "y.tab.c"
+#line 1119 "y.tab.c"
 break;
 case 6:
-#line 79 "analyse_types_expression.y"
+#line 89 "analyse_avec_warning.y"
 	{
         yyval.typeexpr = donneTypeDeclaration(yystack.l_mark[0].strval);
     }
-#line 1114 "y.tab.c"
+#line 1126 "y.tab.c"
 break;
 case 7:
-#line 85 "analyse_types_expression.y"
+#line 95 "analyse_avec_warning.y"
 	{ yyval.typeexpr = ADDITION; }
-#line 1119 "y.tab.c"
+#line 1131 "y.tab.c"
 break;
 case 8:
-#line 86 "analyse_types_expression.y"
+#line 96 "analyse_avec_warning.y"
 	{ yyval.typeexpr = MULTIPLICATION; }
-#line 1124 "y.tab.c"
+#line 1136 "y.tab.c"
 break;
 case 9:
-#line 87 "analyse_types_expression.y"
+#line 97 "analyse_avec_warning.y"
 	{ yyval.typeexpr = SOUSTRACTION; }
-#line 1129 "y.tab.c"
+#line 1141 "y.tab.c"
 break;
 case 10:
-#line 88 "analyse_types_expression.y"
+#line 98 "analyse_avec_warning.y"
 	{ yyval.typeexpr = MODULO; }
-#line 1134 "y.tab.c"
+#line 1146 "y.tab.c"
 break;
-#line 1136 "y.tab.c"
+#line 1148 "y.tab.c"
     default:
         break;
     }
